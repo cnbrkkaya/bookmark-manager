@@ -1,15 +1,23 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+//pages
 import MainPage from './Pages/MainPage/MainPage'
 import CreatePage from './Pages/CreatePage/CreatePage'
+//components
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<MainPage />} />
-        <Route path='/create' element={<CreatePage />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<MainPage />} />
+          <Route path='/create' element={<CreatePage />}></Route>
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+    </>
   )
 }
 
