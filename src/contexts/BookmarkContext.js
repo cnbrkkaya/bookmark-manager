@@ -10,8 +10,12 @@ export default function BookmarkContextProvider(props) {
     JSON.parse(localStorage.getItem('bookmarks')) || []
   )
 
+  const addBookmark = (payload) => {
+    dispatch({ type: 'ADD_BOOKMARK', payload })
+  }
+
   return (
-    <BookmarkContext.Provider value={{ bookmarks }}>
+    <BookmarkContext.Provider value={{ bookmarks, addBookmark }}>
       {props.children}
     </BookmarkContext.Provider>
   )

@@ -9,14 +9,16 @@ import Footer from './components/Footer/Footer'
 import { useBookmarkContext } from './hooks/useBookmarkContext'
 
 function App() {
-  const { bookmarks } = useBookmarkContext()
+  const { bookmarks, addBookmark } = useBookmarkContext()
   return (
     <>
       <Navbar />
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<MainPage bookmarks={bookmarks} />} />
-          <Route path='/create' element={<CreatePage />}></Route>
+          <Route
+            path='/create'
+            element={<CreatePage addBookmark={addBookmark} />}></Route>
         </Routes>
       </BrowserRouter>
       <Footer />
