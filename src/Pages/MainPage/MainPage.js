@@ -5,7 +5,7 @@ import Pagination from '../../components/Pagination/Pagination'
 
 export default function MainPage({ bookmarks }) {
   return (
-    <div>
+    <div className='w-3/12'>
       <Link to='/create'>
         <button
           type='button'

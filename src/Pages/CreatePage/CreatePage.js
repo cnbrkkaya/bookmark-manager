@@ -18,8 +18,7 @@ export default function CreatePage({ addBookmark }) {
 
   return (
     <div>
-      <h1>Create</h1>
-      <Link to='/'>Back</Link>
+      <Link to='/'> Return to List</Link>
 
       <form onSubmit={handleCreate} action=''>
         <input type='text' name='linkName' placeholder='Enter Link' />

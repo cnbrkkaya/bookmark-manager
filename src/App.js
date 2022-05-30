@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className='grid place-items-center h-screen mx-auto max-w-7xl px-4 content-center'>
+      <main className='grid place-items-center h-screen mx-auto'>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<MainPage bookmarks={bookmarks} />} />
