@@ -13,14 +13,17 @@ function App() {
   return (
     <>
       <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<MainPage bookmarks={bookmarks} />} />
-          <Route
-            path='/create'
-            element={<CreatePage addBookmark={addBookmark} />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <main className='grid place-items-center h-screen mx-auto max-w-7xl px-4 content-center'>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<MainPage bookmarks={bookmarks} />} />
+            <Route
+              path='/create'
+              element={<CreatePage addBookmark={addBookmark} />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </main>
+
       <Footer />
     </>
   )
