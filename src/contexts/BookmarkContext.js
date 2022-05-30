@@ -14,8 +14,13 @@ export default function BookmarkContextProvider(props) {
     dispatch({ type: 'ADD_BOOKMARK', payload })
   }
 
+  const removeBookmark = (payload) => {
+    dispatch({ type: 'REMOVE_BOOKMARK', payload })
+  }
+
   return (
-    <BookmarkContext.Provider value={{ bookmarks, addBookmark }}>
+    <BookmarkContext.Provider
+      value={{ bookmarks, addBookmark, removeBookmark }}>
       {props.children}
     </BookmarkContext.Provider>
   )

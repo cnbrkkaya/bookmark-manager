@@ -8,6 +8,12 @@ export default function CartReducer(state, action) {
       return [...state, action.payload]
 
     case 'REMOVE_BOOKMARK':
+      localStorage.setItem(
+        'bookmarks',
+        JSON.stringify(
+          state.filter((bookmark) => bookmark.id !== action.payload)
+        )
+      )
       return state.filter((bookmark) => bookmark.id !== action.payload)
 
     case 'CLEAR':
